@@ -22,7 +22,7 @@ exports.config = {
   },
   include: {
     "I": "./steps_file.js",
-    "practicePOPage": "./pages/practicePO.js"
+    "practice_pageobjectPage": "./pages/Practice_pageobject.js"
   },
   name: 'page_objects_practices'
 }
