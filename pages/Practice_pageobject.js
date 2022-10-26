@@ -10,4 +10,8 @@ module.exports = {
   input_username:{xpath: '//input[@id= "username"]'},
   input_loginPassword:{xpath: '//input[@id= "password"]'},
   btn_login:{xpath: '//input[@name= "login"]'},
+  label_Shop:{xpath: '//a[contains(text(),"Shop")]'},
+  label_Home:{xpath: '//a[contains(text(), "Home")]'},
+  label_ImageSelenium:{xpath: '//img[@title="Selenium Ruby"]'},
+  label_Review:{xpath: '//a[contains(text(),"Reviews (0)")]'},
 }
