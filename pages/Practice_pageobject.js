@@ -11,4 +11,5 @@ module.exports = {
   btn_login:{xpath: '//input[@name= "login"]'},
   label_Shop:{xpath: '//a[contains(text(),"Shop")]'},
   label_Home:{xpath: '//a[contains(text(), "Home")]'},
+  label_ImageSelenium:{xpath: '//img[@title="Selenium Ruby"]'},
 }

@@ -1,4 +1,4 @@
-const assert=require('assert');
+const assert = require('assert');
 Feature('Practice_Automation_Testing');
 
 Scenario('Registration & Login', ({ I, practice_pageobjectPage }) => {
@@ -15,13 +15,27 @@ Scenario('Registration & Login', ({ I, practice_pageobjectPage }) => {
     I.click(practice_pageobjectPage.btn_login);
 });
 
-Scenario('1. Home Page with Three Sliders Only', async({ I, practice_pageobjectPage }) => {
+Scenario('1. Home Page with Three Sliders Only', async ({ I, practice_pageobjectPage }) => {
     I.amOnPage('https://practice.automationtesting.in/');
     I.click(practice_pageobjectPage.label_Shop);
     I.wait(2);
     I.click(practice_pageobjectPage.label_Home);
     I.wait(2);
     let numOfSliders = await I.grabNumberOfVisibleElements('//img[@data-x="50"]');
-    console.log(numOfSliders==3);
-await assert.equal(numOfSliders,3);
+    console.log(numOfSliders == 3);
+    await assert.equal(numOfSliders, 3);
+});
+Scenario("4.Home page - Arrivals-Images-Description", async ({ I, practice_pageobjectPage }) => {
+    I.amOnPage('https://practice.automationtesting.in');
+    I.click(practice_pageobjectPage.label_Shop);
+    I.wait(2);
+    I.click(practice_pageobjectPage.label_Home);
+    I.wait(2);
+    let numOfArrivals = await I.grabNumberOfVisibleElements('//img[@sizes="(max-width: 300px) 100vw, 300px"]');
+    console.log(numOfArrivals == 3);
+    await assert.equal(numOfArrivals, 3);
+    I.wait(2);
+    I.click(practice_pageobjectPage.label_ImageSelenium);
+    I.wait(2);
+    I.see('Product Description');
 });
