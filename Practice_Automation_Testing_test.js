@@ -14,11 +14,10 @@ Scenario('Registration & Login', ({ I, practice_pageobjectPage }) => {
     I.fillField(practice_pageobjectPage.input_username, 'xyz@gmail.com');
     I.fillField(practice_pageobjectPage.input_loginPassword, 'Test@1234!');
     I.click(practice_pageobjectPage.btn_login);
+    I.wait(2);
 });
-
 Scenario('3. Home Page - Images in Arrivals should navigate', async({ I, practice_pageobjectPage }) => {
         I.amOnPage('https://practice.automationtesting.in/');
-        // I.waitForElement(practice_pageobjectPage.label_TestCases, 3);
         I.click(practice_pageobjectPage.label_Shop);
         I.wait(2);
         I.click(practice_pageobjectPage.label_Home);
