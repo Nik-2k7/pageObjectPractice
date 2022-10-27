@@ -14,7 +14,6 @@ Scenario('Registration & Login', ({ I, practice_pageobjectPage }) => {
     I.fillField(practice_pageobjectPage.input_loginPassword, 'Test@1234!');
     I.click(practice_pageobjectPage.btn_login);
 });
-
 Scenario('1. Home Page with Three Sliders Only', async ({ I, practice_pageobjectPage }) => {
     I.amOnPage('https://practice.automationtesting.in/');
     I.click(practice_pageobjectPage.label_Shop);
@@ -38,4 +37,32 @@ Scenario("4.Home page - Arrivals-Images-Description", async ({ I, practice_pageo
     I.click(practice_pageobjectPage.label_ImageSelenium);
     I.wait(2);
     I.see('Product Description');
+});
+//  Scenario 8 is covered in previous Scenario, therefore skipping this 
+//  Scenario("8.Home page - Arrivals-Add to Basket with more books", async({ I, practice_pprojectpage }) => {
+//  });  
+Scenario("9.Home-Arrivals-Add to Basket-Items-Coupon", async ({ I, practice_pageobjectPage }) => {
+    I.amOnPage('https://practice.automationtesting.in');
+    I.click(practice_pageobjectPage.label_Shop);
+    I.wait(3);
+    I.click(practice_pageobjectPage.label_Home);
+    I.wait(3);
+    let numOfArrivals = await I.grabNumberOfVisibleElements('//img[@sizes="(max-width: 300px) 100vw, 300px"]');
+    console.log(numOfArrivals == 3);
+    await assert.equal(numOfArrivals, 3);
+    I.wait(3);
+    I.click(practice_pageobjectPage.label_ImageSelenium);
+    I.wait(2);
+    I.click(practice_pageobjectPage.btn_addToBasket);
+    I.wait(3);
+    I.click(practice_pageobjectPage.btn_viewBasket);
+    I.wait(3);
+    I.see('Selenium Ruby');
+    I.see('₹500.00');
+    I.fillField(practice_pageobjectPage.input_coupon, 'krishnasakinala');
+    I.wait(3);
+    I.click(practice_pageobjectPage.label_applyCoupon);
+    I.wait(3);
+    I.see('Coupon code applied successfully.');
+    I.wait(2);
 });
