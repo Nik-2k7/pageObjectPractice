@@ -1,7 +1,6 @@
 const { I } = inject();
 
 module.exports = {
-
   // insert your locators and methods here
   label_MyAccount:{xpath:'//a[contains(text(), "My Account")]'},
   input_email:{xpath: '//input[@id= "reg_email"]'},
