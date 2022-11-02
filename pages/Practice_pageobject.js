@@ -1,7 +1,6 @@
 const { I } = inject();
 
 module.exports = {
-
   // insert your locators and methods here
   label_MyAccount:{xpath:'//a[contains(text(), "My Account")]'},
   input_email:{xpath: '//input[@id= "reg_email"]'},
@@ -15,3 +14,4 @@ module.exports = {
   label_ImageSelenium:{xpath: '//img[@title="Selenium Ruby"]'},
   label_Review:{xpath: '//a[contains(text(),"Reviews (0)")]'},
 }
+
