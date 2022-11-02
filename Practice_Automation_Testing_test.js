@@ -14,7 +14,6 @@ Scenario('Registration & Login', ({ I, practice_pageobjectPage }) => {
     I.fillField(practice_pageobjectPage.input_loginPassword, 'Test@1234!');
     I.click(practice_pageobjectPage.btn_login);
 });
-
 Scenario('1. Home Page with Three Sliders Only', async ({ I, practice_pageobjectPage }) => {
     I.amOnPage('https://practice.automationtesting.in/');
     I.click(practice_pageobjectPage.label_Shop);
