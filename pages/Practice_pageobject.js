@@ -13,3 +13,4 @@ module.exports = {
   label_Home:{xpath: '//a[contains(text(), "Home")]'},
   label_ImageSelenium:{xpath: '//img[@title="Selenium Ruby"]'},
 }
+
