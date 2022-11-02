@@ -15,5 +15,6 @@ module.exports = {
   label_Review:{xpath: '//a[contains(text(),"Reviews (0)")]'},
   btn_addToBasket:{xpath: '//button[contains(text(), "Add to basket")]'},
   btn_viewBasket:{xpath: '//a[contains(text(), "View Basket")]'},
+  input_noOfBooks:{xpath: '//input[@type="number"]'},
 }
 
