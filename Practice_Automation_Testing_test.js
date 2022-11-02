@@ -1,4 +1,4 @@
-const assert = require('assert');
+const assert=require('assert');
 Feature('Practice_Automation_Testing');
 
 Scenario('Registration & Login', ({ I, practice_pageobjectPage }) => {
@@ -83,3 +83,23 @@ Scenario('5.Home page - Arrivals-Images-Review', async ({ I, practice_pageobject
     I.click(practice_pageobjectPage.label_Review);
     I.see('Reviews');
 });
+
+Scenario('6.Home page - Arrivals-Images-Add to Basket', async({ I, practice_pageobjectPage }) => {
+    I.amOnPage('https://practice.automationtesting.in');
+    I.click(practice_pageobjectPage.label_Shop);
+    I.wait(2);
+    I.click(practice_pageobjectPage.label_Home);
+    I.wait(3);
+    let numOfArrivals = await I.grabNumberOfVisibleElements('//img[@sizes="(max-width: 300px) 100vw, 300px"]');
+    console.log(numOfArrivals==3);
+    await assert.equal(numOfArrivals,3);
+    I.wait(3);
+    I.click(practice_pageobjectPage.label_ImageSelenium);
+    I.wait(2);
+    I.click(practice_pageobjectPage.btn_addToBasket);
+    I.wait(3);
+    I.click(practice_pageobjectPage.btn_viewBasket);
+    I.wait(2);
+    I.see('Selenium Ruby');
+    I.see('₹500.00')
+    });
