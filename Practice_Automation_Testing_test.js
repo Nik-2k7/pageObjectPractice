@@ -151,3 +151,21 @@ Scenario("12.Home-Arrivals-Add to Basket-Items-Add book", async ({ I, practice_p
     I.click(practice_pageobjectPage.label_updateBasket);
     I.wait(3);
 });
+
+Scenario("13.Home-Arrivals-Add to Basket-Items-Check-out-Book Final Price", async ({ I, practice_pageobjectPage }) => {
+    practice_pageobjectPage.HomePageArrival();
+    practice_pageobjectPage.ThreeArrivals();
+    I.click(practice_pageobjectPage.label_ImageSelenium);
+    I.waitForNavigation({});
+    I.click(practice_pageobjectPage.btn_addToBasket);
+    I.waitForNavigation({});
+    I.click(practice_pageobjectPage.btn_viewBasket);
+    I.waitForNavigation({});
+    I.see('Selenium Ruby');
+    I.see('₹500.00');
+    I.wait(5);
+    I.see('Total');
+    I.wait(1);
+    I.see('₹510.00');
+    I.wait(2);
+});
