@@ -20,6 +20,8 @@ module.exports = {
   input_noOfBooks: { xpath: '//input[@type="number"]' },
   input_ImgMasteringJavacript: {xpath: '//img[@title="Mastering JavaScript"]'},
   label_remove: {xpath: '//a[@title="Remove this item"]'},
+  input_quantity: {xpath: '//input[@title="Qty"]'},
+  label_updateBasket: {xpath: '//input[@value="Update Basket"]'},
 
   HomePageArrival() {
     I.amOnPage('https://practice.automationtesting.in/');

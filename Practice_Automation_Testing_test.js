@@ -101,7 +101,7 @@ Scenario("9.Home-Arrivals-Add to Basket-Items-Coupon", async ({ I, practice_page
 Scenario("10.Home-Arrivals-Add to Basket-Items-Coupon value<450", async ({ I, practice_pageobjectPage }) => {
     practice_pageobjectPage.HomePageArrival();
     practice_pageobjectPage.ThreeArrivals();
-    I.click(practice_pageobjectPage. input_ImgMasteringJavacript);
+    I.click(practice_pageobjectPage.input_ImgMasteringJavacript);
     I.waitForNavigation({});
     I.click(practice_pageobjectPage.btn_addToBasket);
     I.waitForNavigation({});
@@ -121,7 +121,7 @@ Scenario("10.Home-Arrivals-Add to Basket-Items-Coupon value<450", async ({ I, pr
 Scenario("11.Home-Arrivals-Add to Basket-Items-Remove book", async ({ I, practice_pageobjectPage }) => {
     practice_pageobjectPage.HomePageArrival();
     practice_pageobjectPage.ThreeArrivals();
-    I.click(practice_pageobjectPage. input_ImgMasteringJavacript);
+    I.click(practice_pageobjectPage.input_ImgMasteringJavacript);
     I.waitForNavigation({});
     I.click(practice_pageobjectPage.btn_addToBasket);
     I.waitForNavigation({});
@@ -131,5 +131,23 @@ Scenario("11.Home-Arrivals-Add to Basket-Items-Remove book", async ({ I, practic
     I.see('₹350.00');
     I.wait(5);
     I.click(practice_pageobjectPage.label_remove);
+    I.wait(3);
+});
+
+Scenario("12.Home-Arrivals-Add to Basket-Items-Remove book", async ({ I, practice_pageobjectPage }) => {
+    practice_pageobjectPage.HomePageArrival();
+    practice_pageobjectPage.ThreeArrivals();
+    I.click(practice_pageobjectPage.label_ImageSelenium);
+    I.waitForNavigation({});
+    I.click(practice_pageobjectPage.btn_addToBasket);
+    I.waitForNavigation({});
+    I.click(practice_pageobjectPage.btn_viewBasket);
+    I.waitForNavigation({});
+    I.see('Selenium Ruby');
+    I.see('₹500.00');
+    I.wait(5);
+    I.fillField(practice_pageobjectPage.input_quantity, '2');
+    I.wait(3);
+    I.click(practice_pageobjectPage.label_updateBasket);
     I.wait(3);
 });
