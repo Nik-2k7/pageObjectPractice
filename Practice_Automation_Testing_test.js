@@ -97,3 +97,23 @@ Scenario("9.Home-Arrivals-Add to Basket-Items-Coupon", async ({ I, practice_page
     I.see('Coupon code applied successfully.');
     I.wait(2);
 });
+
+Scenario("10.Home-Arrivals-Add to Basket-Items-Coupon value<450", async ({ I, practice_pageobjectPage }) => {
+    practice_pageobjectPage.HomePageArrival();
+    practice_pageobjectPage.ThreeArrivals();
+    I.click(practice_pageobjectPage. input_ImgMasteringJavacript);
+    I.waitForNavigation({});
+    I.click(practice_pageobjectPage.btn_addToBasket);
+    I.waitForNavigation({});
+    I.click(practice_pageobjectPage.btn_viewBasket);
+    I.waitForNavigation({});
+    I.see('Mastering JavaScript');
+    I.see('₹350.00');
+    I.wait(5);
+    I.fillField(practice_pageobjectPage.input_coupon, 'krishnasakinala');
+    I.wait(5);
+    I.click(practice_pageobjectPage.label_applyCoupon);
+    I.wait(2);
+    I.see('The minimum spend for this coupon is ₹450.00.');
+    I.wait(2);
+});
