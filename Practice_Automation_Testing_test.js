@@ -117,3 +117,19 @@ Scenario("10.Home-Arrivals-Add to Basket-Items-Coupon value<450", async ({ I, pr
     I.see('The minimum spend for this coupon is ₹450.00.');
     I.wait(2);
 });
+
+Scenario("11.Home-Arrivals-Add to Basket-Items-Remove book", async ({ I, practice_pageobjectPage }) => {
+    practice_pageobjectPage.HomePageArrival();
+    practice_pageobjectPage.ThreeArrivals();
+    I.click(practice_pageobjectPage. input_ImgMasteringJavacript);
+    I.waitForNavigation({});
+    I.click(practice_pageobjectPage.btn_addToBasket);
+    I.waitForNavigation({});
+    I.click(practice_pageobjectPage.btn_viewBasket);
+    I.waitForNavigation({});
+    I.see('Mastering JavaScript');
+    I.see('₹350.00');
+    I.wait(5);
+    I.click(practice_pageobjectPage.label_remove);
+    I.wait(3);
+});
