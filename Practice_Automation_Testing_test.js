@@ -134,7 +134,7 @@ Scenario("11.Home-Arrivals-Add to Basket-Items-Remove book", async ({ I, practic
     I.wait(3);
 });
 
-Scenario("12.Home-Arrivals-Add to Basket-Items-Remove book", async ({ I, practice_pageobjectPage }) => {
+Scenario("12.Home-Arrivals-Add to Basket-Items-Add book", async ({ I, practice_pageobjectPage }) => {
     practice_pageobjectPage.HomePageArrival();
     practice_pageobjectPage.ThreeArrivals();
     I.click(practice_pageobjectPage.label_ImageSelenium);
