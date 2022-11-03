@@ -17,7 +17,13 @@ exports.config = {
     Puppeteer: {
       url: 'http://localhost',
       show: true,
-      windowSize: '1200x900'
+      restart: false,
+      ignoreHTTPSErrors: true,
+      chrome: {
+        args: ['--no-sandbox', '--disable-dev-shm-usage', '--start-maximized', '--single-process', '--ignore-certificate-errors', '--ignore-certificate-errors-spki-list',],
+        defaultViewport: null,
+
+      },
     }
   },
   include: {
