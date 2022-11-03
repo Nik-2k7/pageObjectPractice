@@ -26,6 +26,13 @@ module.exports = {
     I.waitForNavigation({});
     I.click(this.label_Home);
     I.waitForNavigation({});
+  },
+
+  async ThreeArrivals() {
+    let numOfArrivals = await I.grabNumberOfVisibleElements('//img[@sizes="(max-width: 300px) 100vw, 300px"]');
+    console.log(numOfArrivals == 3);
+    await assert.equal(numOfArrivals, 3);
+    I.wait(3);
   }
 }
 
