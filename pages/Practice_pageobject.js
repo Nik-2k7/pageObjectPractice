@@ -16,13 +16,21 @@ module.exports = {
   btn_addToBasket: { xpath: '//button[contains(text(), "Add to basket")]' },
   btn_viewBasket: { xpath: '//a[contains(text(), "View Basket")]' },
   input_coupon: { xpath: '//input[@placeholder="Coupon code"]' },
-  label_applyCoupon: { xpath: '//input[@value="Apply Coupon"]' },
+  input_couponlabel_applyCoupon: { xpath: '//input[@value="Apply Coupon"]' },
   input_noOfBooks: { xpath: '//input[@type="number"]' },
   input_ImgMasteringJavacript: {xpath: '//img[@title="Mastering JavaScript"]'},
   label_remove: {xpath: '//a[@title="Remove this item"]'},
   input_quantity: {xpath: '//input[@title="Qty"]'},
   label_updateBasket: {xpath: '//input[@value="Update Basket"]'},
   label_proceedToCheckout: {xpath: '//a[contains(text(), "Proceed to Checkout")]'},
+  input_firstName: {xpath: '//input[@id="billing_first_name"]'},
+  input_lastName: {xpath: '//input[@id="billing_last_name"]'},
+  input_companyName: {xpath: '//input[@id="billing_company"]'},
+  input_emailAddress: {xpath: '//input[@id="billing_email"]'},
+  input_phoneNo: {xpath: '//input[@id="billing_phone"]'},
+  input_Address: {xpath: '//input[@placeholder="Street address"]'},
+  input_townCity: {xpath: '//input[@id="billing_city"]'},
+  input_postCode: {xpath: '//input[@name="billing_postcode"]'},
 
   HomePageArrival() {
     I.amOnPage('https://practice.automationtesting.in/');
