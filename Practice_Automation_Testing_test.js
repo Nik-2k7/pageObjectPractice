@@ -170,7 +170,7 @@ Scenario("13.Home-Arrivals-Add to Basket-Items-Check-out-Book Final Price", asyn
     I.wait(2);
 });
 
-Scenario("15.Home-Arrivals-Add to Basket-Items-Check-out-Check-out-Total & Sub-Total Condition", async ({ I, practice_pageobjectPage }) => {
+Scenario("15.Home-Arrivals-Add to Basket-Items-Check-out-Total & Sub-Total Condition", async ({ I, practice_pageobjectPage }) => {
     practice_pageobjectPage.HomePageArrival();
     practice_pageobjectPage.ThreeArrivals();
     I.click(practice_pageobjectPage.label_ImageSelenium);
@@ -192,7 +192,7 @@ Scenario("15.Home-Arrivals-Add to Basket-Items-Check-out-Check-out-Total & Sub-T
     I.wait(2);
 });
 
-Scenario("16.Home-Arrivals-Add to Basket-Items-Check-out-Check-out-Total & Sub-Total Condition", async ({ I, practice_pageobjectPage }) => {
+Scenario("16.Home-Arrivals-Add to Basket-Items-Check-out functionality", async ({ I, practice_pageobjectPage }) => {
     practice_pageobjectPage.HomePageArrival();
     practice_pageobjectPage.ThreeArrivals();
     I.click(practice_pageobjectPage.label_ImageSelenium);
