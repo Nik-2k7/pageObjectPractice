@@ -191,3 +191,27 @@ Scenario("15.Home-Arrivals-Add to Basket-Items-Check-out-Check-out-Total & Sub-T
     I.see('₹510.00');
     I.wait(2);
 });
+
+Scenario("16.Home-Arrivals-Add to Basket-Items-Check-out-Check-out-Total & Sub-Total Condition", async ({ I, practice_pageobjectPage }) => {
+    practice_pageobjectPage.HomePageArrival();
+    practice_pageobjectPage.ThreeArrivals();
+    I.click(practice_pageobjectPage.label_ImageSelenium);
+    I.waitForNavigation({});
+    I.click(practice_pageobjectPage.btn_addToBasket);
+    I.waitForNavigation({});
+    I.click(practice_pageobjectPage.btn_viewBasket);
+    I.waitForNavigation({});
+    I.see('Selenium Ruby');
+    I.see('₹500.00');
+    I.wait(5);
+    I.see('Subtotal');
+    I.wait(3);
+    I.see('₹500.00');
+    I.wait(2);
+    I.see('Total');
+    I.wait(2);
+    I.see('₹510.00');
+    I.wait(2);
+    I.click(practice_pageobjectPage.label_proceedToCheckout);
+    I.wait(2);
+});

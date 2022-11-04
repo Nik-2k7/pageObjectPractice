@@ -22,6 +22,7 @@ module.exports = {
   label_remove: {xpath: '//a[@title="Remove this item"]'},
   input_quantity: {xpath: '//input[@title="Qty"]'},
   label_updateBasket: {xpath: '//input[@value="Update Basket"]'},
+  label_proceedToCheckout: {xpath: '//a[contains(text(), "Proceed to Checkout")]'},
 
   HomePageArrival() {
     I.amOnPage('https://practice.automationtesting.in/');
