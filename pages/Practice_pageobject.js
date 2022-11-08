@@ -18,6 +18,7 @@ module.exports = {
   input_coupon: { xpath: '//input[@placeholder="Coupon code"]' },
   label_applyCoupon: { xpath: '//input[@value="Apply Coupon"]' },
   input_noOfBooks: { xpath: '//input[@type="number"]' },
+  input_ImgMasteringJavacript: {xpath: '//img[@title="Mastering JavaScript"]'},
 
   HomePageArrival() {
     I.amOnPage('https://practice.automationtesting.in/');
