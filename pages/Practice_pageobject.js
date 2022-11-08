@@ -19,6 +19,7 @@ module.exports = {
   label_applyCoupon: { xpath: '//input[@value="Apply Coupon"]' },
   input_noOfBooks: { xpath: '//input[@type="number"]' },
   input_ImgMasteringJavacript: {xpath: '//img[@title="Mastering JavaScript"]'},
+  label_remove: {xpath: '//a[@title="Remove this item"]'},
 
   HomePageArrival() {
     I.amOnPage('https://practice.automationtesting.in/');
@@ -33,7 +34,7 @@ module.exports = {
     let numOfArrivals = await I.grabNumberOfVisibleElements('//img[@sizes="(max-width: 300px) 100vw, 300px"]');
     console.log(numOfArrivals == 3);
     await assert.equal(numOfArrivals, 3);
-    I.wait(3);
+    await I.wait(3);
   }
 }
 
