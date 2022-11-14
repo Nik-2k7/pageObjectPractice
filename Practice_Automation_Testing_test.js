@@ -133,3 +133,21 @@ Scenario("11.Home-Arrivals-Add to Basket-Items-Remove book", async ({ I, practic
     await I.click(practice_pageobjectPage.label_remove);
     await I.wait(3);
 });
+
+Scenario("12.Home-Arrivals-Add to Basket-Items-Add book", async ({ I, practice_pageobjectPage }) => {
+    practice_pageobjectPage.HomePageArrival();
+    practice_pageobjectPage.ThreeArrivals();
+    await I.click(practice_pageobjectPage.label_ImageSelenium);
+    await I.waitForNavigation({});
+    await I.click(practice_pageobjectPage.btn_addToBasket);
+    await I.wait ForNavigation({});
+    await I.click(practice_pageobjectPage.btn_viewBasket);
+    await I.waitForNavigation({});
+    await I.see('Selenium Ruby');
+    await I.see('₹500.00');
+    await I.wait(5);
+    await I.fillField(practice_pageobjectPage.input_quantity, '2');
+    await I.wait(3);
+    await I.click(practice_pageobjectPage.label_updateBasket);
+    await I.wait(3);
+});
